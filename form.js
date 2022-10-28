@@ -9,6 +9,7 @@ form.addEventListener('submit', (event) => {
     emailValidate();
     mainPasswordValidate();
     comparePassword();
+    raValidate();
 });
 
 function setError(index) {
@@ -31,7 +32,7 @@ function nameValidate() { // função que valida o nome
 }
 
 function raValidate() { 
-    if (campos[1].value.length < 13) {
+    if (campos[1].value.length != 13) {
         setError(1);
     }
     else {
