@@ -30,17 +30,16 @@ function nameValidate() { // função que valida o nome
     }
 }
 
-function emailValidate() { // função que valida o email
-    if (!emailRegex.test(campos[1].value)) {
+function raValidate() { 
+    if (campos[1].value.length < 13) {
         setError(1);
     }
     else {
         removeError(1);
     }
 }
-
-function mainPasswordValidate() { //função que valida a senha
-    if (campos[2].value.length < 8) {
+function emailValidate() { // função que valida o email
+    if (!emailRegex.test(campos[2].value)) {
         setError(2);
     }
     else {
@@ -48,10 +47,19 @@ function mainPasswordValidate() { //função que valida a senha
     }
 }
 
-function comparePassword() { //compara os dois campos de senha
-    if (campos[2].value == campos[3].value && campos[3].value.length >= 8) {
-        removeError(3);
-    } else {
+function mainPasswordValidate() { //função que valida a senha
+    if (campos[3].value.length < 8) {
         setError(3);
+    }
+    else {
+        removeError(3);
+    }
+}
+
+function comparePassword() { //compara os dois campos de senha
+    if (campos[3].value == campos[3].value && campos[3].value.length >= 8) {
+        removeError(4);
+    } else {
+        setError(4);
     }
 }
