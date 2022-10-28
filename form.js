@@ -64,3 +64,6 @@ function comparePassword() { //compara os dois campos de senha
         setError(4);
     }
 }
+
+//este sera o js que levara as informações colocadas acima no cadastro para info.html
+
